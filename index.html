@@ -144,7 +144,7 @@ h1{
 @keyframes eyePulse{0%,100%{opacity:.65}50%{opacity:1}}
 @keyframes antennaPulse{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 .lead{
-  width:100%;max-width:970px;margin:30px 0 0;
+  width:100%;max-width:var(--hero-title-width,970px);margin:30px 0 0;
   color:var(--muted);font-size:17px;line-height:1.7;
 }
 .btn{
@@ -314,7 +314,7 @@ footer p{max-width:38em;color:var(--muted);margin:18px 0 28px}
   <i style="left:88%;top:63%;animation-delay:-1s"></i>
   <i style="left:64%;top:82%;animation-delay:-6s"></i>
 </div>
-<div class="intro-ov" aria-hidden="true"><div><div class="ov-name">NIDHISH SHAH</div><div class="ov-sub">PORTFOLIO</div></div></div>
+<div class="intro-ov" aria-hidden="true"><div><div class="ov-name">Nidhish Shah</div><div class="ov-sub">PORTFOLIO</div></div></div>
 <div class="wrap">
 <nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#training">Training</a><a href="#contact">Contact</a></nav>
 
@@ -440,6 +440,18 @@ footer p{max-width:38em;color:var(--muted);margin:18px 0 28px}
   if(root.classList.contains("intro")){
     setTimeout(function(){root.classList.remove("intro")},1400);
   }
+})();
+</script>
+<script>
+(function(){
+  function syncHeroSummary(){
+    var title=document.querySelector(".hero h1"), lead=document.querySelector(".hero .lead");
+    if(!title||!lead)return;
+    if(window.innerWidth<=759){ lead.style.maxWidth="100%"; return; }
+    lead.style.maxWidth=title.getBoundingClientRect().width+"px";
+  }
+  syncHeroSummary();
+  window.addEventListener("resize",syncHeroSummary);
 })();
 </script>
 </body>
