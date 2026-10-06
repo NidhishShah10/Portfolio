@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Nidhish Shah — Computer Science student specializing in Artificial Intelligence, with projects in AI/ML, software engineering, backend development, and cybersecurity.">
+<meta property="og:title" content="Nidhish Shah — AI & Security Engineer">
+<meta property="og:description" content="AI/ML, software engineering, backend development, and cybersecurity projects.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1b2a6b">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+<title>Nidhish Shah — AI & Security Engineer</title>
+<style>
+:root{--bg:#e6ebf0;--paper:#fbfcfd;--ink:#1b2a6b;--text:#1d2433;--muted:#5a6578;--line:#c5cedb;--stamp:#c8102e;--open:#dfe6ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1426;--paper:#171e38;--ink:#aab8ff;--text:#e6e9f5;--muted:#9aa3bf;--line:#2c3558;--stamp:#ff5a6e;--open:#202a52}}
+:root[data-theme="dark"]{--bg:#0f1426;--paper:#171e38;--ink:#aab8ff;--text:#e6e9f5;--muted:#9aa3bf;--line:#2c3558;--stamp:#ff5a6e;--open:#202a52}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;margin:0;line-height:1.05}
+a{color:var(--ink)}
+:focus-visible{outline:3px solid var(--stamp);outline-offset:2px}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+nav{display:flex;gap:22px;justify-content:flex-end;padding:18px 0;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{position:relative;padding:36px 0 56px}
+h1{font-size:clamp(3.4rem,13vw,7.5rem);font-weight:700;letter-spacing:-.04em;color:var(--ink)}
+.lead{max-width:36em;margin:22px 0 26px;color:var(--muted)}
+.btn{display:inline-block;padding:11px 20px;border-radius:4px;border:2px solid var(--ink);text-decoration:none;font-weight:600;margin:0 10px 10px 0}
+.btn.main{background:var(--ink);color:var(--bg)}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.wrap{transition:opacity .7s}
+.intro-ov{display:none}
+html.intro{overflow:hidden}
+html.intro .wrap{opacity:0}
+html.intro .stamp{animation-play-state:paused}
+html.intro .intro-ov{display:grid;position:fixed;inset:0;z-index:50;place-content:center;text-align:center;padding:0 16px}
+.ov-name{font:700 clamp(3rem,12vw,8rem)/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.04em;color:var(--ink);white-space:nowrap;transform-origin:0 0;justify-self:center}
+.ov-sub{margin-top:14px;font-size:clamp(1rem,3vw,1.5rem);letter-spacing:.3em;color:var(--muted)}
+.stamp{position:absolute;right:6px;top:8px;width:132px;padding:10px;background:var(--stamp);transform:rotate(6deg);animation:thunk .5s .3s cubic-bezier(.2,1.4,.5,1) both;-webkit-mask:linear-gradient(#000 0 0) content-box no-repeat,radial-gradient(circle 4px at 8px 8px,#0000 96%,#000) -8px -8px/16px 16px;mask:linear-gradient(#000 0 0) content-box no-repeat,radial-gradient(circle 4px at 8px 8px,#0000 96%,#000) -8px -8px/16px 16px}
+.stamp .in{background:var(--paper);color:var(--ink);text-align:center;padding:12px 6px 8px;font:700 1.5rem/1 system-ui,-apple-system,"Segoe UI",sans-serif}
+.stamp svg{width:64px;height:64px;display:block;margin:0 auto 8px}
+.stamp small{display:block;font:600 .68rem/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--stamp);margin-top:6px}
+.cancel{position:absolute;right:92px;top:34px;width:120px;color:var(--ink);opacity:.5;transform:rotate(6deg)}
+@keyframes thunk{from{transform:rotate(6deg) scale(1.8);opacity:0}}
+@media(max-width:700px){.hero>.stamp{position:relative;margin-top:8px}.cancel{display:none}}
+h2{font-size:2rem;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 22px}
+section{padding:44px 0}
+.inbox{background:var(--paper);border:2px solid var(--ink);border-radius:6px;overflow:hidden}
+.inbox details{border-bottom:1px solid var(--line)}
+.inbox details:last-child{border-bottom:0}
+summary{list-style:none;cursor:pointer;display:grid;gap:2px 18px;padding:16px 20px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+@media(min-width:760px){summary{grid-template-columns:170px 1fr 20px}}
+summary:hover{background:var(--open)}
+details[open] summary{background:var(--open)}
+.from{font-size:14px;color:var(--muted)}
+.subj{font:700 1.2rem system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
+.chev{justify-self:end;transition:transform .2s;color:var(--muted)}
+details[open] .chev{transform:rotate(90deg)}
+.body{padding:6px 20px 22px;background:var(--open)}
+@media(min-width:760px){.body{padding-left:208px}}
+.body ul{margin:0;padding-left:1.1em;max-width:62ch}
+.body li{margin-bottom:7px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{font-size:13px;padding:2px 10px;border:1px solid var(--ink);border-radius:3px;background:var(--paper)}
+.hdr{display:grid;gap:0;background:var(--paper);border:2px solid var(--ink);border-radius:6px}
+.hdr div{display:grid;gap:2px 18px;padding:14px 20px;border-bottom:1px solid var(--line)}
+.hdr div:last-child{border-bottom:0}
+@media(min-width:760px){.hdr div{grid-template-columns:170px 1fr}}
+.hdr b{font:700 1rem system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
+.hdr span{color:var(--muted)}
+.edu{max-width:62ch}
+.edu h3{font-size:1.2rem;color:var(--ink)}
+.edu p{margin:4px 0 22px;color:var(--muted)}
+footer{padding:44px 0 64px;border-top:2px solid var(--ink)}
+footer h2{font-size:2.4rem}
+@media(prefers-reduced-motion:reduce){.stamp{animation:none}.chev{transition:none}}
+</style>
+<script>if(!matchMedia("(prefers-reduced-motion:reduce)").matches)document.documentElement.classList.add("intro")</script>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="intro-ov" aria-hidden="true"><div class="ov-name" id="ovName">Nidhish Shah</div><div class="ov-sub" id="ovSub">Portfolio</div></div>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#training">Training</a><a href="#contact">Contact</a></nav>
+
+<header class="hero">
+<h1>Nidhish Shah</h1>
+<p class="lead">Computer Science major specializing in Artificial Intelligence with hands-on project experience developing AI/ML, full-stack, backend, and cybersecurity applications. Experienced in fine-tuning transformer models, building REST APIs, integrating LLMs, and developing secure software solutions using Python, PyTorch, FastAPI, Flask, and JavaScript.</p>
+<svg class="cancel" viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M0 6q15-8 30 0t30 0 30 0 30 0M0 16q15-8 30 0t30 0 30 0 30 0M0 26q15-8 30 0t30 0 30 0 30 0M0 36q15-8 30 0t30 0 30 0 30 0"/></svg>
+<div class="stamp" aria-hidden="true"><div class="in"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M32 4L56 13V32C56 46 45 56 32 60C19 56 8 46 8 32V13Z"/><path d="M32 24L22 38M32 24L42 38M22 38H42" stroke-width="2"/><g fill="currentColor" stroke="none"><circle cx="32" cy="24" r="4"/><circle cx="22" cy="38" r="4"/><circle cx="42" cy="38" r="4"/></g></svg>CS · AI<small>Class of 2026</small></div></div>
+</header>
+
+<section id="projects">
+<h2>Projects</h2>
+<p class="sub">Tap a project to read more.</p>
+<div class="inbox">
+
+<details open><summary><span class="from">AI · Cybersecurity</span><span class="subj">Risk Reveal AI</span><span class="chev">›</span></summary>
+<div class="body"><ul>
+<li>Full-stack app that flags malicious emails and explains each verdict in plain English.</li>
+<li>Fine-tuned DistilBERT on 18,500+ samples from two Kaggle phishing datasets, trained on GPU in Google Colab.</li>
+<li>Weighted risk-scoring pipeline combining language analysis, URL inspection, and DNS-level sender verification.</li>
+<li>FastAPI back end, HTML/CSS/JavaScript front end, and Groq Llama 3.3 70B for the explanations.</li></ul>
+<div class="tags"><span>PyTorch</span><span>DistilBERT</span><span>FastAPI</span><span>Llama 3.3 70B</span></div></div></details>
+
+<details><summary><span class="from">AI · Team project</span><span class="subj">Study Pilot</span><span class="chev">›</span></summary>
+<div class="body"><ul>
+<li>Team web app that summarizes notes, generates flashcards and quizzes, and explains hard concepts using Google's Gemini API.</li>
+<li>Built content upload for text, PDFs, and images, with OCR and interactive Q&amp;A generation.</li>
+<li>Integrated Gemini for multimodal input, conversational explanations, and real-time summarization.</li>
+<li>Contributed to front end and back end, including secure file handling and the RESTful API.</li></ul>
+<div class="tags"><span>Gemini API</span><span>OCR</span><span>REST API</span><span>Full-stack</span></div></div></details>
+
+<details><summary><span class="from">AI · NLP</span><span class="subj">AI Detector &amp; Humanizer</span><span class="chev">›</span></summary>
+<div class="body"><ul>
+<li>Full-stack app that detects AI-generated text and rewrites it with NLP and LLMs.</li>
+<li>End-to-end workflow with API integration, Kaggle dataset testing, and evaluation of rewritten text.</li>
+<li>Benchmarked detection with Scikit-learn and Pandas, reaching about 90% accuracy.</li></ul>
+<div class="tags"><span>Python</span><span>Flask</span><span>Scikit-learn</span><span>Pandas</span></div></div></details>
+
+<details><summary><span class="from">Cybersecurity</span><span class="subj">Secure Password Manager</span><span class="chev">›</span></summary>
+<div class="body"><ul>
+<li>Zero-knowledge web app: encryption runs in the browser, so plaintext credentials never reach the server.</li>
+<li>Implemented PBKDF2, bcrypt, and SHA with in-browser cryptography libraries, deployed over HTTPS/SSL.</li></ul>
+<div class="tags"><span>PBKDF2</span><span>bcrypt</span><span>SHA</span><span>HTTPS/SSL</span></div></div></details>
+
+<details><summary><span class="from">Game development</span><span class="subj">Galaga-Style Space Shooter</span><span class="chev">›</span></summary>
+<div class="body"><ul>
+<li>Designed and built an arcade space shooter inspired by Galaga.</li>
+<li>Implemented player controls, enemy movement, collision detection, and a scoring system.</li>
+<li>Used OOP principles for modularity and easier maintenance, plus sound and visual effects.</li></ul>
+<div class="tags"><span>OOP</span><span>Game loop</span><span>Collision detection</span></div></div></details>
+
+<details><summary><span class="from">Databases · Team project</span><span class="subj">PC Inventory System</span><span class="chev">›</span></summary>
+<div class="body"><ul>
+<li>Desktop app that tracks hardware inventory for small and mid-sized businesses across the full inventory cycle.</li>
+<li>Normalized relational schema backed by EER diagrams, plus Figma mockups for customer, admin, and checkout flows.</li>
+<li>Worked in a 4-member Agile team with weekly checkpoints, sharing backend, UI, and testing work.</li></ul>
+<div class="tags"><span>MySQL</span><span>EER</span><span>Figma</span><span>Agile</span></div></div></details>
+
+<details><summary><span class="from">Java · Systems</span><span class="subj">Data Structures Implementation</span><span class="chev">›</span></summary>
+<div class="body"><ul>
+<li>Client-server application for record management.</li>
+<li>Designed and implemented a binary tree structure for efficient data handling.</li></ul>
+<div class="tags"><span>Java</span><span>Binary tree</span><span>Client-server</span></div></div></details>
+
+<details><summary><span class="from">Java · Desktop apps</span><span class="subj">JavaFX GUI Projects</span><span class="chev">›</span></summary>
+<div class="body"><ul>
+<li>Built JavaFX apps including a currency converter, a metric converter, and a password validator for authentication.</li>
+<li>Completed C projects in a Unix environment, and Java projects using OOP, UML system design, and JavaFX in VS Code.</li>
+<li>All projects are on GitHub.</li></ul>
+<div class="tags"><span>JavaFX</span><span>UML</span><span>C / Unix</span><span>OOP</span></div></div></details>
+
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<p class="sub">The short version.</p>
+<div class="hdr">
+<div><b>Languages</b><span>Python, Java, C++, C#, JavaScript, SQL</span></div>
+<div><b>AI / ML</b><span>PyTorch, Scikit-learn, Pandas, NumPy, Streamlit, NLP, LLM integration, prompt engineering</span></div>
+<div><b>Backend</b><span>FastAPI, Flask, REST APIs, API integration</span></div>
+<div><b>Security</b><span>AES, PBKDF2, bcrypt, SHA, HTTPS/SSL, DNS verification, SPF</span></div>
+<div><b>Tools</b><span>Git, GitHub, VS Code, MySQL Workbench, Jupyter, Google Colab, Figma, Linux/Unix</span></div>
+</div>
+</section>
+
+<section id="training">
+<h2>Education &amp; training</h2>
+<p class="sub">&nbsp;</p>
+<div class="edu">
+<h3>B.S. Computer Science, AI specialization</h3>
+<p>Oakland University, Michigan · Expected December 2026. Coursework includes Data Structures &amp; Algorithms, AI, Machine Learning, Computer Networks, Operating Systems, Cybersecurity, and Database Systems.</p>
+<h3>Cybersecurity Bootcamp</h3>
+<p>University of Michigan, 2022–2023. Ethical hacking, pen testing, cryptography, vulnerability assessment, and secure coding with Wireshark, Burp Suite, and Metasploit.</p>
+<h3>The AI Engineer Course and Bootcamp</h3>
+<p>Udemy, 2025. Built and evaluated ML and LLM projects with Python, PyTorch, TensorFlow, Hugging Face, LangChain, FastAPI, Docker, and Streamlit.</p>
+</div>
+</section>
+
+<footer id="contact">
+<h2>Let’s connect</h2>
+<p style="max-width:38em;color:var(--muted);margin:10px 0 22px">I'm looking for roles in AI/ML engineering, backend development, and security.</p>
+<a class="btn main" href="mailto:Nidhish.shah@hotmail.com">Nidhish.shah@hotmail.com</a><a class="btn" href="https://linkedin.com/in/nidhishshah10" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="https://github.com/NidhishShah10" target="_blank" rel="noopener noreferrer">GitHub</a>
+</footer>
+</div>
+<script>
+(function(){
+var cv=document.getElementById("bg"),cx=cv.getContext("2d"),W,H,P=[],m={x:-999,y:-999},col="27,42,107",t=0;
+var still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function rgb(){var c=getComputedStyle(document.documentElement).getPropertyValue("--ink").trim(),d=document.createElement("canvas").getContext("2d");d.fillStyle=c;d.fillRect(0,0,1,1);var a=d.getImageData(0,0,1,1).data;col=a[0]+","+a[1]+","+a[2]}
+function size(){var r=devicePixelRatio||1;W=innerWidth;H=innerHeight;cv.width=W*r;cv.height=H*r;cx.setTransform(r,0,0,r,0,0);var n=Math.min(80,Math.round(W*H/16000));P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:1.5+Math.random()*2})}
+function draw(){
+if(t++%120===0)rgb();
+cx.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];
+if(!still){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+for(var j=i+1;j<P.length;j++){var q=P[j],dx=p.x-q.x,dy=p.y-q.y,d=dx*dx+dy*dy;if(d<19600){cx.strokeStyle="rgba("+col+","+(.28*(1-d/19600))+")";cx.lineWidth=1;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}}
+var mx=p.x-m.x,my=p.y-m.y,md=mx*mx+my*my;if(md<32400){cx.strokeStyle="rgba("+col+","+(.45*(1-md/32400))+")";cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(m.x,m.y);cx.stroke()}
+cx.fillStyle="rgba("+col+",.45)";cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fill()}
+if(!still&&!document.hidden)requestAnimationFrame(draw);else if(!still)setTimeout(draw,500)}
+addEventListener("pointermove",function(e){m.x=e.clientX;m.y=e.clientY});
+addEventListener("pointerleave",function(){m.x=m.y=-999});
+addEventListener("resize",size);
+document.addEventListener("visibilitychange",function(){if(!document.hidden&&!still)draw()});
+size();draw();
+
+var root=document.documentElement;
+if(!root.classList.contains("intro"))return;
+var done=false;
+function finish(){if(done)return;done=true;root.classList.remove("intro")}
+setTimeout(finish,6000);
+function run(){
+var n=document.getElementById("ovName"),s=document.getElementById("ovSub"),h=document.querySelector(".hero h1");
+var rg=document.createRange();rg.selectNodeContents(h);var T=rg.getBoundingClientRect(),R=n.getBoundingClientRect();
+var k=T.width/R.width,dx=T.left-R.left,dy=T.top-R.top;
+s.animate([{opacity:1},{opacity:0}],{duration:500,fill:"forwards"});
+var a=n.animate([{transform:"none"},{transform:"translate("+dx+"px,"+dy+"px) scale("+k+")"}],{duration:1000,delay:150,easing:"cubic-bezier(.65,0,.25,1)",fill:"forwards"});
+a.onfinish=finish}
+var go=function(){setTimeout(run,1400)};
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(go);else go();
+})();
+</script>
+</body>
+</html>
