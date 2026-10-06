@@ -118,12 +118,26 @@ nav a:hover{color:var(--lime)}
   color:var(--lime);font-size:11px;font-weight:700;letter-spacing:.18em;
 }
 h1{
-  max-width:900px;
-  font-size:clamp(4.2rem,12vw,9rem);
+  max-width:none;
+  font-size:clamp(3.6rem,10.6vw,8.7rem);
   font-weight:800;
   letter-spacing:-.075em;
   color:var(--text);
+  white-space:nowrap;
 }
+.robot{
+  position:absolute;
+  right:clamp(-420px,calc((1040px - 100vw)/2 - 10px),-10px);
+  top:34px;width:170px;height:170px;
+  color:var(--lime);opacity:.92;filter:drop-shadow(0 0 18px rgba(200,255,53,.12));
+  animation:robotFloat 5s ease-in-out infinite;
+}
+.robot svg{width:100%;height:100%;display:block;overflow:visible}
+.robot .eye{animation:eyePulse 3.2s ease-in-out infinite}
+.robot .antenna{transform-origin:85px 20px;animation:antennaPulse 2.8s ease-in-out infinite}
+@keyframes robotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes eyePulse{0%,100%{opacity:.65}50%{opacity:1}}
+@keyframes antennaPulse{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 .lead{
   max-width:690px;margin:34px 0 34px;
   color:var(--muted);font-size:18px;line-height:1.7;
@@ -151,8 +165,9 @@ html.intro .intro-ov{
   letter-spacing:-.075em;color:var(--text);white-space:nowrap;
 }
 .ov-sub{
-  margin-top:18px;font-size:11px;font-weight:700;
-  letter-spacing:.28em;text-transform:uppercase;color:var(--lime);
+  margin-top:22px; font-size:clamp(18px, 2.2vw, 24px); font-weight:700; letter-spacing:.18em; 
+  text-transform:uppercase;
+  color:var(--lime);
 }
 .stamp,.cancel{display:none}
 
@@ -261,7 +276,11 @@ footer p{max-width:38em;color:var(--muted);margin:18px 0 28px}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .btn,.chev{transition:none}
-  body::after,.bg-field::before,.bg-field::after,.bg-field i{animation:none}
+  body::after,.bg-field::before,.bg-field::after,.bg-field i,.robot,.robot .eye,.robot .antenna{animation:none}
+}
+@media(max-width:480px){
+  .robot{width:82px;height:82px;top:4px;right:-4px}
+  h1{font-size:clamp(2.7rem,14vw,4.2rem)}
 }
 </style>
 <script>if(!matchMedia("(prefers-reduced-motion:reduce)").matches)document.documentElement.classList.add("intro")</script>
@@ -275,11 +294,26 @@ footer p{max-width:38em;color:var(--muted);margin:18px 0 28px}
   <i style="left:88%;top:63%;animation-delay:-1s"></i>
   <i style="left:64%;top:82%;animation-delay:-6s"></i>
 </div>
-<div class="intro-ov" aria-hidden="true"><div><div class="ov-name">Nidhish Shah</div><div class="ov-sub">Computer Science × Artificial Intelligence</div></div></div>
+<div class="intro-ov" aria-hidden="true"><div><div class="ov-name">Nidhish Shah</div><div class="ov-sub">PORTFOLIO</div></div></div>
 <div class="wrap">
 <nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#training">Training</a><a href="#contact">Contact</a></nav>
 
 <header class="hero">
+<div class="robot" aria-label="Lime green robot illustration">
+<svg viewBox="0 0 170 170" fill="none" aria-hidden="true">
+<g stroke="currentColor" stroke-width="3">
+<path class="antenna" d="M85 38V22"/><circle cx="85" cy="16" r="6" fill="currentColor" stroke="none"/>
+<rect x="38" y="38" width="94" height="68" rx="20" fill="rgba(200,255,53,.035)"/>
+<path d="M52 58h66M52 87h66" opacity=".25"/>
+<rect x="57" y="58" width="16" height="16" rx="5" class="eye" fill="currentColor" stroke="none"/>
+<rect x="97" y="58" width="16" height="16" rx="5" class="eye" fill="currentColor" stroke="none"/>
+<path d="M72 90q13 9 26 0" stroke-linecap="round"/>
+<path d="M28 62h10M132 62h10M28 86h10M132 86h10" opacity=".65"/>
+<rect x="54" y="112" width="62" height="36" rx="10" fill="rgba(200,255,53,.025)"/>
+<path d="M70 122v16M100 122v16M54 123l-14 10M116 123l14 10"/>
+<circle cx="85" cy="130" r="5" fill="currentColor" stroke="none"/>
+</g>
+</svg></div>
 <h1>Nidhish Shah</h1>
 <p class="lead">Computer Science major specializing in Artificial Intelligence with hands-on project experience developing AI/ML, full-stack, backend, and cybersecurity applications. Experienced in fine-tuning transformer models, building REST APIs, integrating LLMs, and developing secure software solutions using Python, PyTorch, FastAPI, Flask, and JavaScript.</p>
 
@@ -351,7 +385,7 @@ footer p{max-width:38em;color:var(--muted);margin:18px 0 28px}
 
 <section id="skills">
 <h2>Skills</h2>
-<p class="sub">The short version.</p>
+<p class="sub">A quick look at the technologies and tools I use most.</p>
 <div class="hdr">
 <div><b>Languages</b><span>Python, Java, C++, C#, JavaScript, SQL</span></div>
 <div><b>AI / ML</b><span>PyTorch, Scikit-learn, Pandas, NumPy, Streamlit, NLP, LLM integration, prompt engineering</span></div>
