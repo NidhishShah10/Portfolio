@@ -111,7 +111,7 @@ nav a{
   transition:color .2s;
 }
 nav a:hover{color:var(--lime)}
-.hero{padding:110px 0 125px;position:relative}
+.hero{padding:110px 0 125px;position:relative;border-bottom:1px solid var(--line)}
 .hero::before{
   content:"01 / INTRO";
   display:block;margin-bottom:28px;
@@ -127,10 +127,15 @@ h1{
 }
 .robot{
   position:absolute;
-  right:clamp(-420px,calc((1040px - 100vw)/2 - 10px),-10px);
-  top:34px;width:170px;height:170px;
-  color:var(--lime);opacity:.92;filter:drop-shadow(0 0 18px rgba(200,255,53,.12));
+  right:clamp(-380px,calc((1040px - 100vw)/2 + 38px),38px);
+  top:72px;
+  width:220px;
+  height:220px;
+  color:var(--lime);
+  opacity:.94;
+  filter:drop-shadow(0 0 24px rgba(200,255,53,.16));
   animation:robotFloat 5s ease-in-out infinite;
+  z-index:2;
 }
 .robot svg{width:100%;height:100%;display:block;overflow:visible}
 .robot .eye{animation:eyePulse 3.2s ease-in-out infinite}
@@ -165,9 +170,14 @@ html.intro .intro-ov{
   letter-spacing:-.075em;color:var(--text);white-space:nowrap;
 }
 .ov-sub{
-  margin-top:22px; font-size:clamp(18px, 2.2vw, 24px); font-weight:700; letter-spacing:.18em; 
+  margin-top:24px;
+  font-size:clamp(22px,3vw,34px);
+  font-weight:800;
+  letter-spacing:.24em;
+  line-height:1;
   text-transform:uppercase;
   color:var(--lime);
+  text-shadow:0 0 18px rgba(200,255,53,.20);
 }
 .stamp,.cancel{display:none}
 
@@ -279,7 +289,16 @@ footer p{max-width:38em;color:var(--muted);margin:18px 0 28px}
   body::after,.bg-field::before,.bg-field::after,.bg-field i,.robot,.robot .eye,.robot .antenna{animation:none}
 }
 @media(max-width:480px){
-  .robot{width:82px;height:82px;top:4px;right:-4px}
+  .robot{
+    width:110px;
+    height:110px;
+    right:-4px;
+    top:62px;
+  }
+  .ov-sub{
+    font-size:clamp(18px,6vw,26px);
+    letter-spacing:.18em;
+  }
   h1{font-size:clamp(2.7rem,14vw,4.2rem)}
 }
 </style>
