@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Nidhish Shah — Computer Science student specializing in Artificial Intelligence, with projects in AI/ML, software engineering, backend development, and cybersecurity.">
-<meta property="og:title" content="Nidhish Shah | AI & Software Engineering Portfolio">
+<meta property="og:title" content="Nidhish Shah — AI & Security Engineer">
 <meta property="og:description" content="AI/ML, software engineering, backend development, and cybersecurity projects.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0a0a0a">
@@ -24,8 +24,14 @@
   --lime-soft:rgba(200,255,53,.10);
   --max:1040px;
 }
+
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
 body{
   margin:0;
   background:var(--bg);
@@ -33,90 +39,213 @@ body{
   font:400 16px/1.65 Arial,Helvetica,sans-serif;
   letter-spacing:-.01em;
 }
+
 body::before{
   content:"";
-  position:fixed;inset:0;pointer-events:none;z-index:-2;
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-2;
   background:
     linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
   background-size:56px 56px;
-  mask-image:linear-gradient(to bottom,black 0%,rgba(0,0,0,.8) 55%,transparent 100%);
+  mask-image:linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0,0,0,.8) 55%,
+    transparent 100%
+  );
 }
+
 body::after{
   content:"";
   position:fixed;
-  width:42vw;height:42vw;
-  max-width:620px;max-height:620px;
-  left:-14vw;top:8vh;
-  pointer-events:none;z-index:-1;
-  background:radial-gradient(circle,rgba(200,255,53,.10) 0%,rgba(200,255,53,.035) 30%,transparent 70%);
+  width:42vw;
+  height:42vw;
+  max-width:620px;
+  max-height:620px;
+  left:-14vw;
+  top:8vh;
+  pointer-events:none;
+  z-index:-1;
+  background:radial-gradient(
+    circle,
+    rgba(200,255,53,.10) 0%,
+    rgba(200,255,53,.035) 30%,
+    transparent 70%
+  );
   filter:blur(10px);
   animation:driftGlow 14s ease-in-out infinite alternate;
 }
+
 .bg-field{
-  position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden;
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  overflow:hidden;
 }
+
 .bg-field i{
-  position:absolute;width:5px;height:5px;border-radius:50%;
-  background:var(--lime);box-shadow:0 0 16px rgba(200,255,53,.45);
+  position:absolute;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--lime);
+  box-shadow:0 0 16px rgba(200,255,53,.45);
   opacity:.38;
   animation:nodePulse 5s ease-in-out infinite;
 }
+
 .bg-field i::after{
-  content:"";position:absolute;left:3px;top:3px;
-  width:180px;height:1px;transform-origin:left center;
-  background:linear-gradient(90deg,rgba(200,255,53,.18),transparent);
+  content:"";
+  position:absolute;
+  left:3px;
+  top:3px;
+  width:180px;
+  height:1px;
+  transform-origin:left center;
+  background:linear-gradient(
+    90deg,
+    rgba(200,255,53,.18),
+    transparent
+  );
   transform:rotate(-18deg);
 }
+
 .bg-field::before,
 .bg-field::after{
   content:"";
   position:absolute;
-  width:1px;height:34vh;
-  background:linear-gradient(to bottom,transparent,rgba(200,255,53,.22),transparent);
+  width:1px;
+  height:34vh;
+  background:linear-gradient(
+    to bottom,
+    transparent,
+    rgba(200,255,53,.22),
+    transparent
+  );
   opacity:.45;
   transform:rotate(28deg);
 }
-.bg-field::before{left:19%;top:-8%;animation:scanA 11s ease-in-out infinite}
-.bg-field::after{right:22%;top:28%;animation:scanB 15s ease-in-out infinite}
+
+.bg-field::before{
+  left:19%;
+  top:-8%;
+  animation:scanA 11s ease-in-out infinite;
+}
+
+.bg-field::after{
+  right:22%;
+  top:28%;
+  animation:scanB 15s ease-in-out infinite;
+}
+
 @keyframes nodePulse{
-  0%,100%{transform:scale(.8);opacity:.18}
-  50%{transform:scale(1.5);opacity:.5}
+  0%,100%{
+    transform:scale(.8);
+    opacity:.18;
+  }
+  50%{
+    transform:scale(1.5);
+    opacity:.5;
+  }
 }
+
 @keyframes driftGlow{
-  0%{transform:translate3d(0,0,0) scale(1)}
-  100%{transform:translate3d(24vw,22vh,0) scale(1.15)}
+  0%{
+    transform:translate3d(0,0,0) scale(1);
+  }
+  100%{
+    transform:translate3d(24vw,22vh,0) scale(1.15);
+  }
 }
+
 @keyframes scanA{
-  0%,100%{transform:translateY(-20vh) rotate(28deg);opacity:0}
+  0%,100%{
+    transform:translateY(-20vh) rotate(28deg);
+    opacity:0;
+  }
   45%{opacity:.5}
-  70%{transform:translateY(75vh) rotate(28deg);opacity:0}
+  70%{
+    transform:translateY(75vh) rotate(28deg);
+    opacity:0;
+  }
 }
+
 @keyframes scanB{
-  0%,100%{transform:translateY(25vh) rotate(28deg);opacity:0}
+  0%,100%{
+    transform:translateY(25vh) rotate(28deg);
+    opacity:0;
+  }
   40%{opacity:.35}
-  75%{transform:translateY(-55vh) rotate(28deg);opacity:0}
+  75%{
+    transform:translateY(-55vh) rotate(28deg);
+    opacity:0;
+  }
 }
-h1,h2,h3{margin:0;line-height:1;font-family:Arial,Helvetica,sans-serif}
+
+h1,h2,h3{
+  margin:0;
+  line-height:1;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
 a{color:inherit}
-:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
-nav{
-  display:flex;gap:28px;justify-content:flex-end;align-items:center;
-  padding:24px 0;border-bottom:1px solid var(--line);
+
+:focus-visible{
+  outline:2px solid var(--lime);
+  outline-offset:4px;
 }
+
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 28px;
+}
+
+/* NAVIGATION */
+nav{
+  display:flex;
+  gap:28px;
+  justify-content:flex-end;
+  align-items:center;
+  padding:24px 0;
+  border-bottom:1px solid var(--line);
+}
+
 nav a{
-  color:var(--muted);font-size:12px;font-weight:700;
-  letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  text-decoration:none;
   transition:color .2s;
 }
-nav a:hover{color:var(--lime)}
-.hero{padding:110px 0 65px;position:relative;border-bottom:1px solid var(--line)}
+
+nav a:hover{
+  color:var(--lime);
+}
+
+/* HERO */
+.hero{
+  padding:110px 0 65px;
+  position:relative;
+  border-bottom:1px solid var(--line);
+}
+
 .hero::before{
   content:"INTRO";
-  display:block;margin-bottom:28px;
-  color:var(--lime);font-size:11px;font-weight:700;letter-spacing:.18em;
+  display:block;
+  margin-bottom:28px;
+  color:var(--lime);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.18em;
 }
+
 h1{
   display:inline-block;
   width:max-content;
@@ -127,50 +256,95 @@ h1{
   color:var(--text);
   white-space:nowrap;
 }
+
 .robot{
   position:absolute;
-  right:clamp(-380px,calc((1040px - 100vw)/2 + 38px),38px);
+  right:clamp(
+    -380px,
+    calc((1040px - 100vw)/2 + 38px),
+    38px
+  );
   top:82px;
   width:220px;
   height:220px;
   color:var(--lime);
   opacity:.94;
-  filter:drop-shadow(0 0 24px rgba(200,255,53,.16));
+  filter:drop-shadow(
+    0 0 24px rgba(200,255,53,.16)
+  );
   animation:robotFloat 5s ease-in-out infinite;
   z-index:2;
 }
-.robot svg{width:100%;height:100%;display:block;overflow:visible}
-.robot .eye{animation:eyePulse 3.2s ease-in-out infinite}
-.robot .antenna{transform-origin:85px 20px;animation:antennaPulse 2.8s ease-in-out infinite}
-@keyframes robotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes eyePulse{0%,100%{opacity:.65}50%{opacity:1}}
-@keyframes antennaPulse{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+
+.robot svg{
+  width:100%;
+  height:100%;
+  display:block;
+  overflow:visible;
+}
+
+.robot .eye{
+  animation:eyePulse 3.2s ease-in-out infinite;
+}
+
+.robot .antenna{
+  transform-origin:85px 20px;
+  animation:antennaPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes robotFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+@keyframes eyePulse{
+  0%,100%{opacity:.65}
+  50%{opacity:1}
+}
+
+@keyframes antennaPulse{
+  0%,100%{transform:rotate(-3deg)}
+  50%{transform:rotate(3deg)}
+}
+
 .lead{
-  width:100%;max-width:var(--hero-title-width,970px);margin:30px 0 0;
-  color:var(--muted);font-size:17px;line-height:1.7;
+  width:100%;
+  max-width:var(--hero-title-width,970px);
+  margin:30px 0 0;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.7;
 }
-.btn{
-  display:inline-block;padding:12px 18px;margin:0 10px 10px 0;
-  border:1px solid var(--line);border-radius:2px;
-  color:var(--text);text-decoration:none;font-size:12px;
-  font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  transition:all .2s;
-}
-.btn:hover{border-color:var(--lime);color:var(--lime)}
-.btn.main{background:var(--lime);border-color:var(--lime);color:#090909}
-.btn.main:hover{background:#d9ff72}
-#bg{display:none}
+
+/* INTRO OVERLAY */
 .intro-ov{display:none}
-html.intro{overflow:hidden}
-html.intro .wrap{opacity:0}
-html.intro .intro-ov{
-  display:grid;position:fixed;inset:0;z-index:50;
-  place-content:center;text-align:center;padding:0 16px;background:var(--bg);
+
+html.intro{
+  overflow:hidden;
 }
+
+html.intro .wrap{
+  opacity:0;
+}
+
+html.intro .intro-ov{
+  display:grid;
+  position:fixed;
+  inset:0;
+  z-index:50;
+  place-content:center;
+  text-align:center;
+  padding:0 16px;
+  background:var(--bg);
+}
+
 .ov-name{
   font:800 clamp(3rem,12vw,9rem)/1 Arial,Helvetica,sans-serif;
-  letter-spacing:-.075em;color:var(--text);white-space:nowrap;
+  letter-spacing:-.075em;
+  color:var(--text);
+  white-space:nowrap;
 }
+
 .ov-sub{
   margin-top:24px;
   font-size:clamp(22px,3vw,34px);
@@ -181,133 +355,370 @@ html.intro .intro-ov{
   color:var(--lime);
   text-shadow:0 0 18px rgba(200,255,53,.20);
 }
-.stamp,.cancel{display:none}
 
-section{padding:95px 0}
-section+section{border-top:1px solid var(--line)}
-h2{
-  font-size:clamp(2.2rem,5vw,4rem);font-weight:800;
-  letter-spacing:-.055em;text-transform:uppercase;
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  margin:0 10px 10px 0;
+  border:1px solid var(--line);
+  border-radius:2px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  transition:all .2s;
 }
+
+.btn:hover{
+  border-color:var(--lime);
+  color:var(--lime);
+}
+
+.btn.main{
+  background:var(--lime);
+  border-color:var(--lime);
+  color:#090909;
+}
+
+.btn.main:hover{
+  background:#d9ff72;
+}
+
+/* SECTIONS */
+section{
+  padding:95px 0;
+}
+
+section+section{
+  border-top:1px solid var(--line);
+}
+
+h2{
+  font-size:clamp(2.2rem,5vw,4rem);
+  font-weight:800;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+}
+
 .sub{
-  color:var(--muted);margin:12px 0 30px;
+  color:var(--muted);
+  margin:12px 0 30px;
   font-size:14px;
 }
+
 h2::before{
   content:"";
-  display:inline-block;width:9px;height:9px;
-  background:var(--lime);margin:0 12px 8px 0;
+  display:inline-block;
+  width:9px;
+  height:9px;
+  background:var(--lime);
+  margin:0 12px 8px 0;
 }
 
+/* EDUCATION */
+.edu{
+  max-width:760px;
+}
+
+.edu h3{
+  color:var(--text);
+  font-size:18px;
+  font-weight:700;
+  padding-left:17px;
+  position:relative;
+}
+
+.edu h3::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:7px;
+  width:7px;
+  height:7px;
+  background:var(--lime);
+}
+
+.edu p{
+  margin:8px 0 32px;
+  color:var(--muted);
+}
+
+/* PROJECTS */
 .inbox{
   background:var(--paper);
   border:1px solid var(--line);
   border-radius:3px;
   overflow:hidden;
 }
-.inbox details{border-bottom:1px solid var(--line)}
-.inbox details:last-child{border-bottom:0}
+
+.inbox details{
+  border-bottom:1px solid var(--line);
+}
+
+.inbox details:last-child{
+  border-bottom:0;
+}
+
 summary{
-  list-style:none;cursor:pointer;
-  display:grid;grid-template-columns:190px 1fr 22px;
-  gap:18px;padding:23px 24px;align-items:center;
+  list-style:none;
+  cursor:pointer;
+  display:grid;
+  grid-template-columns:190px 1fr 22px;
+  gap:18px;
+  padding:23px 24px;
+  align-items:center;
   transition:background .2s;
 }
-summary::-webkit-details-marker{display:none}
-summary:hover,details[open] summary{background:var(--lime-soft)}
-.from{
-  color:var(--muted);font-size:10px;font-weight:700;
-  letter-spacing:.12em;text-transform:uppercase;
+
+summary::-webkit-details-marker{
+  display:none;
 }
+
+summary:hover,
+details[open] summary{
+  background:var(--lime-soft);
+}
+
+.from{
+  color:var(--muted);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
 .subj{
   font:700 1.25rem/1.2 Arial,Helvetica,sans-serif;
   color:var(--text);
 }
-.chev{color:var(--lime);font-size:20px;transition:transform .2s}
-details[open] .chev{transform:rotate(90deg)}
+
+.chev{
+  color:var(--lime);
+  font-size:20px;
+  transition:transform .2s;
+}
+
+details[open] .chev{
+  transform:rotate(90deg);
+}
+
 .body{
   padding:0 24px 26px 232px;
   background:var(--paper-2);
 }
-.body ul{margin:0;padding:22px 0 0 18px;max-width:700px}
-.body li{margin-bottom:8px;color:#c8c8c1}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
-.tags span{
-  font-size:10px;padding:5px 9px;
-  border:1px solid #383838;border-radius:2px;
-  color:var(--muted);text-transform:uppercase;letter-spacing:.06em;
+
+.body ul{
+  margin:0;
+  padding:22px 0 0 18px;
+  max-width:760px;
 }
 
+.body li{
+  margin-bottom:8px;
+  color:#c8c8c1;
+}
+
+/* PROJECT TAGS */
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:18px;
+}
+
+.tags span,
+.tags a{
+  font-size:10px;
+  padding:5px 9px;
+  border:1px solid #383838;
+  border-radius:2px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+.tags a{
+  color:var(--lime);
+  text-decoration:none;
+  font-weight:700;
+  transition:all .2s;
+}
+
+.tags a:hover{
+  border-color:var(--lime);
+  background:var(--lime-soft);
+  color:var(--lime);
+}
+
+/* SKILLS */
 .hdr{
-  display:grid;background:var(--paper);
-  border:1px solid var(--line);border-radius:3px;
+  display:grid;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:3px;
 }
-.hdr div{
-  display:grid;grid-template-columns:190px 1fr;
-  gap:18px;padding:20px 24px;border-bottom:1px solid var(--line);
-}
-.hdr div:last-child{border-bottom:0}
-.hdr b{
-  color:var(--lime);font-size:11px;
-  text-transform:uppercase;letter-spacing:.12em;
-}
-.hdr span{color:#c8c8c1}
-.edu{max-width:760px}
-.edu h3{
-  color:var(--text);font-size:18px;font-weight:700;
-  padding-left:17px;position:relative;
-}
-.edu h3::before{
-  content:"";position:absolute;left:0;top:7px;
-  width:7px;height:7px;background:var(--lime);
-}
-.edu p{margin:8px 0 32px;color:var(--muted)}
 
+.hdr div{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:18px;
+  padding:20px 24px;
+  border-bottom:1px solid var(--line);
+}
+
+.hdr div:last-child{
+  border-bottom:0;
+}
+
+.hdr b{
+  color:var(--lime);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+.hdr span{
+  color:#c8c8c1;
+}
+
+/* CONTACT */
 footer{
   padding:95px 0 75px;
   border-top:1px solid var(--line);
 }
-footer h2{font-size:clamp(2.5rem,6vw,5rem)}
-footer p{max-width:38em;color:var(--muted);margin:18px 0 28px}
 
+footer h2{
+  font-size:clamp(2.5rem,6vw,5rem);
+}
+
+footer p{
+  max-width:38em;
+  color:var(--muted);
+  margin:18px 0 28px;
+}
+
+/* MOBILE */
 @media(max-width:759px){
-  .lead{max-width:100%;}
-  .wrap{padding:0 18px}
-  nav{justify-content:flex-start;gap:18px;overflow:auto}
-  nav a{font-size:10px}
-  .hero{padding:75px 0 85px}
-  h1{font-size:clamp(3.5rem,18vw,6rem)}
-  .lead{font-size:16px}
-  section{padding:70px 0}
-  summary{grid-template-columns:1fr 22px;gap:10px}
-  .from{grid-column:1}
-  .subj{grid-column:1}
-  .chev{grid-column:2;grid-row:1/3}
-  .body{padding:0 20px 24px}
-  .hdr div{grid-template-columns:1fr;gap:6px}
+
+  .lead{
+    max-width:100%;
+  }
+
+  .wrap{
+    padding:0 18px;
+  }
+
+  nav{
+    justify-content:flex-start;
+    gap:18px;
+    overflow:auto;
+  }
+
+  nav a{
+    font-size:10px;
+  }
+
+  .hero{
+    padding:75px 0 85px;
+  }
+
+  h1{
+    font-size:clamp(3.5rem,18vw,6rem);
+  }
+
+  .lead{
+    font-size:16px;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+  summary{
+    grid-template-columns:1fr 22px;
+    gap:10px;
+  }
+
+  .from{
+    grid-column:1;
+  }
+
+  .subj{
+    grid-column:1;
+  }
+
+  .chev{
+    grid-column:2;
+    grid-row:1/3;
+  }
+
+  .body{
+    padding:0 20px 24px;
+  }
+
+  .hdr div{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
 }
+
+/* REDUCED MOTION */
 @media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .btn,.chev{transition:none}
-  body::after,.bg-field::before,.bg-field::after,.bg-field i,.robot,.robot .eye,.robot .antenna{animation:none}
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .btn,
+  .chev,
+  .tags a{
+    transition:none;
+  }
+
+  body::after,
+  .bg-field::before,
+  .bg-field::after,
+  .bg-field i,
+  .robot,
+  .robot .eye,
+  .robot .antenna{
+    animation:none;
+  }
 }
+
+/* SMALL MOBILE */
 @media(max-width:480px){
+
   .robot{
     width:110px;
     height:110px;
     right:-4px;
     top:62px;
   }
+
   .ov-sub{
     font-size:clamp(18px,6vw,26px);
     letter-spacing:.18em;
   }
-  h1{font-size:clamp(2.7rem,14vw,4.2rem)}
+
+  h1{
+    font-size:clamp(2.7rem,14vw,4.2rem);
+  }
 }
 </style>
-<script>if(!matchMedia("(prefers-reduced-motion:reduce)").matches)document.documentElement.classList.add("intro")</script>
+
+<script>
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)
+document.documentElement.classList.add("intro")
+</script>
+
 </head>
+
 <body>
+
 <div class="bg-field" aria-hidden="true">
   <i style="left:8%;top:22%;animation-delay:-2s"></i>
   <i style="left:23%;top:68%;animation-delay:-7s"></i>
@@ -316,148 +727,634 @@ footer p{max-width:38em;color:var(--muted);margin:18px 0 28px}
   <i style="left:88%;top:63%;animation-delay:-1s"></i>
   <i style="left:64%;top:82%;animation-delay:-6s"></i>
 </div>
-<div class="intro-ov" aria-hidden="true"><div><div class="ov-name">NIDHISH SHAH</div><div class="ov-sub">PORTFOLIO</div></div></div>
-<div class="wrap">
-<nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
 
+<div class="intro-ov" aria-hidden="true">
+  <div>
+    <div class="ov-name">NIDHISH SHAH</div>
+    <div class="ov-sub">PORTFOLIO</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- NAVIGATION -->
+<nav aria-label="Sections">
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- INTRO -->
 <header class="hero">
+
 <div class="robot" aria-label="Lime green robot illustration">
 <svg viewBox="0 0 170 170" fill="none" aria-hidden="true">
+
 <g stroke="currentColor" stroke-width="3">
-<path class="antenna" d="M85 38V22"/><circle cx="85" cy="16" r="6" fill="currentColor" stroke="none"/>
-<rect x="38" y="38" width="94" height="68" rx="20" fill="rgba(200,255,53,.035)"/>
+
+<path class="antenna" d="M85 38V22"/>
+<circle cx="85" cy="16" r="6" fill="currentColor" stroke="none"/>
+
+<rect
+  x="38"
+  y="38"
+  width="94"
+  height="68"
+  rx="20"
+  fill="rgba(200,255,53,.035)"
+/>
+
 <path d="M52 58h66M52 87h66" opacity=".25"/>
-<rect x="57" y="58" width="16" height="16" rx="5" class="eye" fill="currentColor" stroke="none"/>
-<rect x="97" y="58" width="16" height="16" rx="5" class="eye" fill="currentColor" stroke="none"/>
+
+<rect
+  x="57"
+  y="58"
+  width="16"
+  height="16"
+  rx="5"
+  class="eye"
+  fill="currentColor"
+  stroke="none"
+/>
+
+<rect
+  x="97"
+  y="58"
+  width="16"
+  height="16"
+  rx="5"
+  class="eye"
+  fill="currentColor"
+  stroke="none"
+/>
+
 <path d="M72 90q13 9 26 0" stroke-linecap="round"/>
-<path d="M28 62h10M132 62h10M28 86h10M132 86h10" opacity=".65"/>
-<rect x="54" y="112" width="62" height="36" rx="10" fill="rgba(200,255,53,.025)"/>
+
+<path
+  d="M28 62h10M132 62h10M28 86h10M132 86h10"
+  opacity=".65"
+/>
+
+<rect
+  x="54"
+  y="112"
+  width="62"
+  height="36"
+  rx="10"
+  fill="rgba(200,255,53,.025)"
+/>
+
 <path d="M70 122v16M100 122v16M54 123l-14 10M116 123l14 10"/>
-<circle cx="85" cy="130" r="5" fill="currentColor" stroke="none"/>
+
+<circle
+  cx="85"
+  cy="130"
+  r="5"
+  fill="currentColor"
+  stroke="none"
+/>
+
 </g>
-</svg></div>
+</svg>
+</div>
+
 <h1>Nidhish Shah</h1>
-<p class="lead">Computer Science student specializing in Artificial Intelligence, building AI/ML, full-stack, backend, and cybersecurity applications. Experienced with transformer models, REST APIs, LLM integration, and secure software development using Python, PyTorch, FastAPI, Flask, and JavaScript.</p>
+
+<p class="lead">
+Computer Science student specializing in Artificial Intelligence, building AI/ML, full-stack, backend, and cybersecurity applications. Experienced with transformer models, REST APIs, LLM integration, and secure software development using Python, PyTorch, FastAPI, Flask, and JavaScript.
+</p>
 
 </header>
 
+<!-- EDUCATION -->
+<section id="education">
+
+<h2>Education &amp; training</h2>
+
+<p class="sub">&nbsp;</p>
+
+<div class="edu">
+
+<h3>B.S. Computer Science, AI specialization</h3>
+
+<p>
+Oakland University, Michigan · Expected December 2026. Coursework includes Data Structures &amp; Algorithms, AI, Machine Learning, Computer Networks, Operating Systems, Cybersecurity, and Database Systems.
+</p>
+
+<h3>Cybersecurity Bootcamp</h3>
+
+<p>
+University of Michigan, 2022–2023. Ethical hacking, pen testing, cryptography, vulnerability assessment, and secure coding with Wireshark, Burp Suite, and Metasploit.
+</p>
+
+<h3>The AI Engineer Course and Bootcamp</h3>
+
+<p>
+Udemy, 2025. Built and evaluated ML and LLM projects with Python, PyTorch, TensorFlow, Hugging Face, LangChain, FastAPI, Docker, and Streamlit.
+</p>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
 <section id="projects">
+
 <h2>Projects</h2>
-<p class="sub">Tap a project to read more.</p>
+
+<p class="sub">
+Tap a project to read more.
+</p>
+
 <div class="inbox">
 
-<details open><summary><span class="from">AI · Cybersecurity</span><span class="subj">Risk Reveal AI</span><span class="chev">›</span></summary>
-<div class="body"><ul>
-<li>Full-stack app that flags malicious emails and explains each verdict in plain English.</li>
-<li>Fine-tuned DistilBERT on 18,500+ samples from two Kaggle phishing datasets, trained on GPU in Google Colab.</li>
-<li>Weighted risk-scoring pipeline combining language analysis, URL inspection, and DNS-level sender verification.</li>
-<li>FastAPI back end, HTML/CSS/JavaScript front end, and Groq Llama 3.3 70B for the explanations.</li></ul>
-<div class="tags"><span>PyTorch</span><span>DistilBERT</span><span>FastAPI</span><span>Llama 3.3 70B</span></div></div></details>
+<!-- 1. RISK REVEAL AI -->
+<details open>
 
-<details><summary><span class="from">AI · Team project</span><span class="subj">Study Pilot</span><span class="chev">›</span></summary>
-<div class="body"><ul>
-<li>Team web app that summarizes notes, generates flashcards and quizzes, and explains hard concepts using Google's Gemini API.</li>
-<li>Built content upload for text, PDFs, and images, with OCR and interactive Q&amp;A generation.</li>
-<li>Integrated Gemini for multimodal input, conversational explanations, and real-time summarization.</li>
-<li>Contributed to front end and back end, including secure file handling and the RESTful API.</li></ul>
-<div class="tags"><span>Gemini API</span><span>OCR</span><span>REST API</span><span>Full-stack</span></div></div></details>
+<summary>
+<span class="from">AI · Cybersecurity</span>
+<span class="subj">Risk Reveal AI — Smart Phishing Detection Assistant</span>
+<span class="chev">›</span>
+</summary>
 
-<details><summary><span class="from">AI · NLP</span><span class="subj">AI Detector &amp; Humanizer</span><span class="chev">›</span></summary>
-<div class="body"><ul>
-<li>Full-stack app that detects AI-generated text and rewrites it with NLP and LLMs.</li>
-<li>End-to-end workflow with API integration, Kaggle dataset testing, and evaluation of rewritten text.</li>
-<li>Benchmarked detection with Scikit-learn and Pandas, reaching about 90% accuracy.</li></ul>
-<div class="tags"><span>Python</span><span>Flask</span><span>Scikit-learn</span><span>Pandas</span></div></div></details>
+<div class="body">
 
-<details><summary><span class="from">Cybersecurity</span><span class="subj">Secure Password Manager</span><span class="chev">›</span></summary>
-<div class="body"><ul>
-<li>Zero-knowledge web app: encryption runs in the browser, so plaintext credentials never reach the server.</li>
-<li>Implemented PBKDF2, bcrypt, and SHA with in-browser cryptography libraries, deployed over HTTPS/SSL.</li></ul>
-<div class="tags"><span>PBKDF2</span><span>bcrypt</span><span>SHA</span><span>HTTPS/SSL</span></div></div></details>
+<ul>
 
-<details><summary><span class="from">Game development</span><span class="subj">Galaga-Style Space Shooter</span><span class="chev">›</span></summary>
-<div class="body"><ul>
-<li>Designed and built an arcade space shooter inspired by Galaga.</li>
-<li>Implemented player controls, enemy movement, collision detection, and a scoring system.</li>
-<li>Used OOP principles for modularity and easier maintenance, plus sound and visual effects.</li></ul>
-<div class="tags"><span>OOP</span><span>Game loop</span><span>Collision detection</span></div></div></details>
+<li>
+Developed a full-stack phishing detection web app that flags malicious emails and generates plain-English, explainable-AI justifications for each verdict.
+</li>
 
-<details><summary><span class="from">Databases · Team project</span><span class="subj">PC Inventory System</span><span class="chev">›</span></summary>
-<div class="body"><ul>
-<li>Desktop app that tracks hardware inventory for small and mid-sized businesses across the full inventory cycle.</li>
-<li>Normalized relational schema backed by EER diagrams, plus Figma mockups for customer, admin, and checkout flows.</li>
-<li>Worked in a 4-member Agile team with weekly checkpoints, sharing backend, UI, and testing work.</li></ul>
-<div class="tags"><span>MySQL</span><span>EER</span><span>Figma</span><span>Agile</span></div></div></details>
+<li>
+Fine-tuned a DistilBERT transformer on 18,500+ combined samples from two Kaggle phishing datasets for binary phishing classification, training on GPU-accelerated Google Colab.
+</li>
 
-<details><summary><span class="from">Java · Systems</span><span class="subj">Data Structures Implementation</span><span class="chev">›</span></summary>
-<div class="body"><ul>
-<li>Client-server application for record management.</li>
-<li>Designed and implemented a binary tree structure for efficient data handling.</li></ul>
-<div class="tags"><span>Java</span><span>Binary tree</span><span>Client-server</span></div></div></details>
+<li>
+Designed a multi-signal weighted risk-scoring pipeline that fuses transformer-based language analysis, structural URL inspection, and DNS-level sender verification into a single risk score.
+</li>
 
-<details><summary><span class="from">Java · Desktop apps</span><span class="subj">JavaFX GUI Projects</span><span class="chev">›</span></summary>
-<div class="body"><ul>
-<li>Built JavaFX apps including a currency converter, a metric converter, and a password validator for authentication.</li>
-<li>Completed C projects in a Unix environment, and Java projects using OOP, UML system design, and JavaFX in VS Code.</li>
-<li>All projects are on GitHub.</li></ul>
-<div class="tags"><span>JavaFX</span><span>UML</span><span>C / Unix</span><span>OOP</span></div></div></details>
+<li>
+Built the back end using Python/FastAPI and front end using HTML/CSS/JavaScript, integrating Groq Llama 3.3 70B LLM for natural-language explanations.
+</li>
+
+</ul>
+
+<div class="tags">
+<span>PyTorch</span>
+<span>DistilBERT</span>
+<span>FastAPI</span>
+<span>Llama 3.3 70B</span>
+
+<a
+  href="https://github.com/NidhishShah10/RiskRevealAI"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+GitHub ↗
+</a>
+</div>
 
 </div>
+</details>
+
+<!-- 2. AI DETECTOR & HUMANIZER -->
+<details>
+
+<summary>
+<span class="from">AI · NLP</span>
+<span class="subj">AI Detector &amp; Humanizer App</span>
+<span class="chev">›</span>
+</summary>
+
+<div class="body">
+
+<ul>
+
+<li>
+Developed a full-stack web application to detect and rewrite AI-generated text with the help of NLP and LLMs.
+</li>
+
+<li>
+Created a complete end-to-end workflow including API integration, Kaggle dataset testing, and evaluation of the rewritten text.
+</li>
+
+<li>
+Completed benchmark detection performance using Scikit-learn and Pandas, achieving approximately 90% detection accuracy.
+</li>
+
+<li>
+Built the backend using Python/Flask, and the frontend using HTML/CSS/JavaScript.
+</li>
+
+</ul>
+
+<div class="tags">
+<span>Python</span>
+<span>Flask</span>
+<span>Scikit-learn</span>
+<span>Pandas</span>
+
+<a
+  href="https://github.com/NidhishShah10/AI-Detector-App"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+GitHub ↗
+</a>
+</div>
+
+</div>
+</details>
+
+<!-- 3. SECURE PASSWORD MANAGER -->
+<details>
+
+<summary>
+<span class="from">Cybersecurity</span>
+<span class="subj">Secure Password Manager</span>
+<span class="chev">›</span>
+</summary>
+
+<div class="body">
+
+<ul>
+
+<li>
+Built a secure web application for password storage and generation using modern cryptographic techniques.
+</li>
+
+<li>
+Created a zero-knowledge architecture with client-side encryption to prevent plaintext credentials from reaching the server.
+</li>
+
+<li>
+Implemented PBKDF2, bcrypt, and SHA using in-browser cryptography libraries and deployed over HTTPS/SSL.
+</li>
+
+</ul>
+
+<div class="tags">
+<span>PBKDF2</span>
+<span>bcrypt</span>
+<span>SHA</span>
+<span>HTTPS/SSL</span>
+</div>
+
+</div>
+</details>
+
+<!-- 4. GALAGA -->
+<details>
+
+<summary>
+<span class="from">Game development</span>
+<span class="subj">Galaga-Style Space Shooter</span>
+<span class="chev">›</span>
+</summary>
+
+<div class="body">
+
+<ul>
+
+<li>
+Designed and built an arcade space shooter inspired by Galaga.
+</li>
+
+<li>
+Implemented player controls, enemy movement, collision detection, and a scoring system.
+</li>
+
+<li>
+Used OOP principles for modularity and easier maintenance, plus sound and visual effects.
+</li>
+
+</ul>
+
+<div class="tags">
+<span>OOP</span>
+<span>Game loop</span>
+<span>Collision detection</span>
+
+<a
+  href="https://github.com/NidhishShah10/Rebel-Alliance-Galactic-Revolt"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+GitHub ↗
+</a>
+</div>
+
+</div>
+</details>
+
+<!-- 5. STUDY PILOT -->
+<details>
+
+<summary>
+<span class="from">AI · Team project</span>
+<span class="subj">Study Pilot</span>
+<span class="chev">›</span>
+</summary>
+
+<div class="body">
+
+<ul>
+
+<li>
+Team web app that summarizes notes, generates flashcards and quizzes, and explains hard concepts using Google's Gemini API.
+</li>
+
+<li>
+Built content upload for text, PDFs, and images, with OCR and interactive Q&amp;A generation.
+</li>
+
+<li>
+Integrated Gemini for multimodal input, conversational explanations, and real-time summarization.
+</li>
+
+<li>
+Contributed to front end and back end, including secure file handling and the RESTful API.
+</li>
+
+</ul>
+
+<div class="tags">
+<span>Gemini API</span>
+<span>OCR</span>
+<span>REST API</span>
+<span>Full-stack</span>
+</div>
+
+</div>
+</details>
+
+<!-- 6. PC INVENTORY SYSTEM -->
+<details>
+
+<summary>
+<span class="from">Databases · Team project</span>
+<span class="subj">PC Inventory System — Database Design &amp; Implementation</span>
+<span class="chev">›</span>
+</summary>
+
+<div class="body">
+
+<ul>
+
+<li>
+Developed a desktop-based application using MySQL to track inventory of hardware for small and medium sized businesses throughout the inventory cycle.
+</li>
+
+<li>
+Designed a normalized relational database schema supported by comprehensive EER diagrams.
+</li>
+
+<li>
+Created Figma UI mockups for customer, administrator, and checkout workflows.
+</li>
+
+<li>
+Collaborated on a 4-member Agile team with weekly checkpoints, owning a share of backend, UI, and testing responsibilities.
+</li>
+
+</ul>
+
+<div class="tags">
+<span>MySQL</span>
+<span>EER</span>
+<span>Figma</span>
+<span>Agile</span>
+</div>
+
+</div>
+</details>
+
+<!-- 7. DATA STRUCTURES -->
+<details>
+
+<summary>
+<span class="from">Java · Systems</span>
+<span class="subj">Data Structures Implementation</span>
+<span class="chev">›</span>
+</summary>
+
+<div class="body">
+
+<ul>
+
+<li>
+Client-server application for record management.
+</li>
+
+<li>
+Designed and implemented a binary tree structure for efficient data handling.
+</li>
+
+</ul>
+
+<div class="tags">
+<span>Java</span>
+<span>Binary tree</span>
+<span>Client-server</span>
+</div>
+
+</div>
+</details>
+
+<!-- 8. JAVAFX -->
+<details>
+
+<summary>
+<span class="from">Java · Desktop apps</span>
+<span class="subj">JavaFX GUI Projects</span>
+<span class="chev">›</span>
+</summary>
+
+<div class="body">
+
+<ul>
+
+<li>
+Built JavaFX apps including a currency converter, a metric converter, and a password validator for authentication.
+</li>
+
+<li>
+Completed C projects in a Unix environment, and Java projects using OOP, UML system design, and JavaFX in VS Code.
+</li>
+
+<li>
+Additional projects and implementations are available on GitHub, including the projects above and other coursework-based Java, C, Unix, and systems work.
+</li>
+
+</ul>
+
+<div class="tags">
+<span>JavaFX</span>
+<span>UML</span>
+<span>C / Unix</span>
+<span>OOP</span>
+
+<a
+  href="https://github.com/NidhishShah10?tab=repositories"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+GitHub ↗
+</a>
+</div>
+
+</div>
+</details>
+
+</div>
+
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
+
 <h2>Skills</h2>
-<p class="sub">A quick look at the technologies and tools I use most.</p>
+
+<p class="sub">
+A quick look at the technologies and tools I use most.
+</p>
+
 <div class="hdr">
-<div><b>Languages</b><span>Python, Java, C++, C#, JavaScript, SQL</span></div>
-<div><b>AI / ML</b><span>PyTorch, Scikit-learn, Pandas, NumPy, Streamlit, NLP, LLM integration, prompt engineering</span></div>
-<div><b>Backend</b><span>FastAPI, Flask, REST APIs, API integration</span></div>
-<div><b>Security</b><span>AES, PBKDF2, bcrypt, SHA, HTTPS/SSL, DNS verification, SPF</span></div>
-<div><b>Tools</b><span>Git, GitHub, VS Code, MySQL Workbench, Jupyter, Google Colab, Figma, Linux/Unix</span></div>
+
+<div>
+<b>Languages</b>
+<span>
+Python, Java, C++, C#, JavaScript, SQL
+</span>
 </div>
+
+<div>
+<b>AI / ML</b>
+<span>
+PyTorch, Scikit-learn, Pandas, NumPy, Streamlit, NLP, LLM integration, prompt engineering
+</span>
+</div>
+
+<div>
+<b>Backend</b>
+<span>
+FastAPI, Flask, REST APIs, API integration
+</span>
+</div>
+
+<div>
+<b>Security</b>
+<span>
+AES, PBKDF2, bcrypt, SHA, HTTPS/SSL, DNS verification, SPF
+</span>
+</div>
+
+<div>
+<b>Tools</b>
+<span>
+Git, GitHub, VS Code, MySQL Workbench, Jupyter, Google Colab, Figma, Linux/Unix
+</span>
+</div>
+
+</div>
+
 </section>
 
-<section id="education">
-<h2>Education &amp; training</h2>
-<p class="sub">&nbsp;</p>
-<div class="edu">
-<h3>B.S. Computer Science, AI specialization</h3>
-<p>Oakland University, Michigan · Expected December 2026. Coursework includes Data Structures &amp; Algorithms, AI, Machine Learning, Computer Networks, Operating Systems, Cybersecurity, and Database Systems.</p>
-<h3>Cybersecurity Bootcamp</h3>
-<p>University of Michigan, 2022–2023. Ethical hacking, pen testing, cryptography, vulnerability assessment, and secure coding with Wireshark, Burp Suite, and Metasploit.</p>
-<h3>The AI Engineer Course and Bootcamp</h3>
-<p>Udemy, 2025. Built and evaluated ML and LLM projects with Python, PyTorch, TensorFlow, Hugging Face, LangChain, FastAPI, Docker, and Streamlit.</p>
-</div>
-</section>
-
+<!-- CONTACT -->
 <footer id="contact">
+
 <h2>Let’s connect</h2>
-<p style="max-width:38em;color:var(--muted);margin:10px 0 22px">I'm looking for roles in AI/ML engineering, software development, and security.</p>
-<a class="btn main" href="mailto:Nidhish.shah@hotmail.com">Nidhish.shah@hotmail.com</a><a class="btn" href="https://linkedin.com/in/nidhishshah10" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="https://github.com/NidhishShah10" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn" href="Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+
+<p style="max-width:38em;color:var(--muted);margin:10px 0 22px">
+I'm looking for roles in AI/ML engineering, software development, and security.
+</p>
+
+<a
+  class="btn main"
+  href="mailto:Nidhish.shah@hotmail.com"
+>
+Nidhish.shah@hotmail.com
+</a>
+
+<a
+  class="btn"
+  href="https://linkedin.com/in/nidhishshah10"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+LinkedIn
+</a>
+
+<a
+  class="btn"
+  href="https://github.com/NidhishShah10"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+GitHub
+</a>
+
+<a
+  class="btn"
+  href="Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+Resume
+</a>
+
 </footer>
+
 </div>
+
 <script>
 (function(){
+
   var root=document.documentElement;
+
   if(root.classList.contains("intro")){
-    setTimeout(function(){root.classList.remove("intro")},1400);
+
+    setTimeout(function(){
+      root.classList.remove("intro");
+    },1400);
+
   }
+
 })();
 </script>
+
 <script>
 (function(){
+
   function syncHeroSummary(){
-    var title=document.querySelector(".hero h1"), lead=document.querySelector(".hero .lead");
+
+    var title=document.querySelector(".hero h1");
+    var lead=document.querySelector(".hero .lead");
+
     if(!title||!lead)return;
+
     if(window.innerWidth<=759){
+
       lead.style.maxWidth="100%";
       return;
+
     }
-    lead.style.maxWidth=Math.round(title.getBoundingClientRect().width)+"px";
+
+    lead.style.maxWidth=
+      Math.round(title.getBoundingClientRect().width)+"px";
+
   }
+
   requestAnimationFrame(syncHeroSummary);
-  window.addEventListener("resize",syncHeroSummary);
+
+  window.addEventListener(
+    "resize",
+    syncHeroSummary
+  );
+
 })();
 </script>
+
 </body>
 </html>
